@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0;
+  padding: 0;
+  box-sizing: border-box;
   }
   body {
     background-color: rgb(0, 0, 34);
@@ -11,7 +12,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
+    height: 10vh;
     background-color: rgb(32, 32, 62);
   }
 
@@ -21,40 +22,62 @@
   }
   nav ul li {
     list-style: none;
-    margin: 0 23px;
+    margin: 0 15px; /* Adjusted margin for smaller screens */
     cursor: pointer;
   }
   nav ul li a {
     text-decoration: none;
     color: white;
+    transition: 0.3s;
+    /* overflow: hidden; */
+    z-index: 1;
+  }
+  nav ul:hover li a{
+    opacity: 0.1;
   }
   nav ul li a:hover {
-    color: rgb(66, 66, 209);
     font-size: 1.04rem;
+    transform: scale(1.4);
+    z-index: 1000;
+    color: #ff3f81;
+    opacity: 1;
   }
+  nav ul li a:before{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+    transform: skewX(35deg);
+    transition: 0s;
+  }
+  
   main hr{
     border: 0;
     background: #9c97f1;
     height: 1.2px;
-    margin: 40px 5px;
+    margin: 20px 5px;/* Adjusted margin for smaller screens */
   }
   .left {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;/* Adjusted font size for smaller screens */
   }
   .firstSection {
     display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
     justify-content: space-around;
-    margin: 120px 0;
+    margin: 80px 0;
     align-items: center;
   }
 
   .firstSection > div {
-    width: 30%;
-    height: 100px;
+    width: 100%; /* Full width on smaller screens */
+  max-width: 300px; /* Limit width on larger screens */
+  margin-bottom: 20px; /* Adjusted margin for smaller screens */
   }
   .leftSection {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted font size for smaller screens */
   }
   .rightSection img {
     width: 80%;
@@ -68,20 +91,21 @@
   .secondSection {
   max-width: 80%;
   margin: auto;
-    margin-top: 300px;
-    height: 120vh;
+  height: 120vh;
+  margin-top: 150px; /* Adjusted margin for smaller screens */
+  padding: 0 20px; /* Added padding for smaller screens */
   }
   .secondSection h1{
-    font-size: 1.9rem;
+    font-size: 1.6rem; /* Adjusted font size for smaller screens */
   }
   .text-gray{
     color: grey;
   }
   .secondSection .box{
     background: white;
-width: 80vw;
+width: 100%;
 height: 2px;
-margin: 54px 0;
+margin: 40px 0;/* Adjusted margin for smaller screens */
 display: flex;
 }
 .secondSection .vertical{
@@ -89,18 +113,20 @@ display: flex;
   width: 1px;
   background-color: white;
   margin: 0 130px;
+  display: flexbox; /* Hide vertical separator on smaller screens */
 }
 .vertical-title{
     position: relative;
     top: 75px;
-    width: 150px;
-    font-style: bold;
+    width: 50%;
+    font-weight: bold; /* Corrected property name */
+    text-align: center; /* Center align for smaller screens */
 }
 .img-top{
-  width: 25px;
+    width: 30px; 
   position: relative;
-    top: -31px;
-    left: -12px;
+  top: -37px; 
+  left: -17px; 
 }
 .vertical-desc {
     position: relative;
@@ -108,6 +134,7 @@ display: flex;
     color: grey;
     width: 150px;
     font-size: 9px;
+    
 }
 footer{
     background-color: rgb(32, 32, 62);
@@ -115,15 +142,19 @@ footer{
 }
 .footer{
     display: flex;
-    padding: 23px 122px;
-    justify-content: space-evenly
+    flex-wrap: wrap;
+    padding: 20px 0;    
+    justify-content: center;
 }
 .footer ul{
      list-style: none;
 
 }
 .footer div{
-    width: 223px;
+    width: 100%; /* Full width on smaller screens */
+  max-width: 300px; /* Limit width on larger screens */
+  margin-bottom: 20px; /* Adjusted margin for smaller screens */
+  text-align: center; /* Center align for smaller screens */
 }
 footer .footer-right{
     text-align: center;
@@ -138,6 +169,17 @@ footer .footer-right{
     border: 2px solid white;
     border-radius: 6px;
     cursor: pointer;
+    transition: 0.3s;
 }
-
-/* Path: index.html */
+.btn:hover{
+    background-color: #ff3f81;    
+    font-size: 1rem;
+    transform: scale(1.4);
+    z-index: 1000;
+    color: white;
+}
+@media (max-width: 768px){
+    .secondSection .vertical {
+        display: none; /* Hide vertical separator on smaller screens */
+      }
+}
