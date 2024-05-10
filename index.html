@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yash dev portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Yash's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, my name is <span class="purple"> Yash </span>
+          <div>and I am a Passionate</div>
+          <span id="element"></span>
+          <div class="button">
+            <button class="btn">Download Resume</button>
+            <button class="btn">Visit Github</button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="bg.png" alt="" />
+        </div>
+      </section>
+
+      <section class="secondSection">
+        <hr />
+        <span class="text-gray">What I have done so far</span>
+        <h1>Work Experience</h1>
+
+        <div class="box">
+           <div class="vertical">
+            <img class="img-top" src="js.png" alt="">
+            <div class="vertical-title">
+                Javascript Developer 
+            </div>
+            <div class="vertical-desc">
+                As a JavaScript developer, you're the architect of interactive experiences on the web. Your expertise in JavaScript empowers you to craft dynamic and engaging user interfaces, leveraging frameworks like React, Angular, or Vue.js to breathe life into static websites and applications. Your role extends beyond mere coding; you're a problem solver, collaborating with teams to transform concepts into polished products that exceed expectations. 
+            </div>
+
+           </div>
+           <div class="vertical"><img class="img-top" src="nodejs.png" alt="">
+            <div class="vertical-title">
+                Node.JS Developer
+            </div>
+            <div class="vertical-desc">
+               As a Node.js developer, you're a master of backend magic, wielding JavaScript to power the server-side of web applications. Your expertise in Node.js allows you to build scalable and efficient server-side architectures, handling everything from data storage and retrieval to authentication and API integrations. You thrive in the world of asynchronous programming, leveraging Node.js's event-driven model to create lightning-fast and responsive applications. Beyond coding, you're a problem solver, adept at debugging and optimizing performance to ensure smooth operation under heavy loads. 
+            </div>
+        </div>
+           <div class="vertical">
+            <img class="img-top" src="dev.png" alt="">
+            <div class="vertical-title">
+                Cloud engineer
+            </div>
+            <div class="vertical-desc">
+                As a cloud engineer, you're the architect of digital infrastructure, harnessing the power of cloud computing to build scalable and resilient systems. Your expertise spans a vast array of cloud platforms like AWS, Azure, or Google Cloud, enabling you to design and deploy solutions tailored to specific business needs. From provisioning virtual machines to orchestrating containerized workloads with Kubernetes, you're adept at leveraging cloud-native technologies to optimize performance and minimize costs.
+            </div>
+           </div>
+           <div class="vertical">
+            <img class="img-top" src="dev.png" alt="">
+            <div class="vertical-title">
+                software engineer
+            </div>
+            <div class="vertical-desc">
+                As a software engineer, you're the architect of digital solutions, crafting intricate systems and applications that power the modern world. Your expertise spans the entire software development lifecycle, from conceptualization and design to implementation, testing, and maintenance. Proficient in multiple programming languages and frameworks, you're versatile, adapting your skills to meet the unique requirements of each project. Whether it's building scalable web applications, designing robust mobile apps, or developing complex desktop software, you approach each challenge with precision and creativity.
+            </div>
+           </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                Yash's Portfolio
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Links</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Links</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Links</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-right">
+           Copyright &#169; www.yash'sportfolio.com | All rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer",
+          "Have knowledge in",
+          "cyber security and blockchain",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
